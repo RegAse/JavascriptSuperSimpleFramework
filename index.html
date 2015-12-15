@@ -6,15 +6,23 @@
 </head>
 <body>
 	<h1>Hello</h1>
-	<div class="movies">
+	<div class="tv-shows">
 		
 	</div>
-	<template name="test1">
-		<h1>Name: {{ name }}</h1>
+	<template name="tvshow">
+		<h1>{{ title }}</h1>
 		<div>Rating: {{ rating }}</div>
 		<div>IMDB rating: {{ imdbRating }}</div>
 		<div>{{ name }} reviews</div>
+		<div>
+			Episode:
+			{{ episode,episodes }}
+		</div>
 	</template>
-	<script src="js/main.js" type="text/javascript"></script>
+	<template name="episode">
+		<h2>Episode Title: {{ title }}</h2>
+		Season {{ season }} Episode {{ episode }} 
+	</template>
+	<script src="js/jssf-0.1.js" type="text/javascript"></script>
 </body>
 </html>
